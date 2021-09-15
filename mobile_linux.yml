@@ -5,5 +5,6 @@
      - name: Deploying mobile linux {{ Release_Tag }} on UL Servers
        ignore_errors: True
        shell: |
+         curl https://github.com/LambdaTest/mobile-automation/releases/download/{{ Release_Tag }}/mobile_linux
          curl https://mobile-automation-testing.s3.amazonaws.com/mobile-automation/{{ Repo_Owner }}/{{ Release_Tag }}/mobile_linux -o /Users/ltadmin/Downloads/mobile_linux
        
